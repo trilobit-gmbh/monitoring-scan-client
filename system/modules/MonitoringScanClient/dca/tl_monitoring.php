@@ -32,7 +32,10 @@
  */
 $GLOBALS['TL_DCA']['tl_monitoring']['palettes']['__selector__'][] = "client_scan_active";
 $GLOBALS['TL_DCA']['tl_monitoring']['palettes']['default'] .= ";{client_legend},client_scan_active";
-$GLOBALS['TL_DCA']['tl_monitoring']['subpalettes']['client_scan_active'] .= "client_url,client_token,client_data";
+
+if (isset($GLOBALS['TL_DCA']['tl_monitoring']['subpalettes']['client_scan_active'])) {
+  $GLOBALS['TL_DCA']['tl_monitoring']['subpalettes']['client_scan_active'] .= "client_url,client_token,client_data";
+}
 
 /**
  * Add fields
